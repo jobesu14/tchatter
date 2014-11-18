@@ -13,9 +13,12 @@ class IphoneChat(Protocol):
     def connectionLost(self, reason):
         self.factory.clients.remove(self)
         print "Client ", self, " disconnected with ", reason
-        msg = self.name + " has left"
+        try:
+	        msg = self.name + " has left"
+        except AttributeError:
+        	msg = "An unknow user has left"
         for c in self.factory.clients:
-            c.message(msg)
+        	c.message(msg)
     
     def dataReceived(self, data):
         a = data.split(':')
