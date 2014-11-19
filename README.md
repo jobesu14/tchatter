@@ -7,4 +7,3 @@ Requirements mac OSX 10.8, 10.9:
 - upgrade twisted (http://twistedmatrix.com/trac/wiki/Downloads). Easy way
 	-> install pip: goto http://pip.readthedocs.org/en/latest/installing.html#install-pip, download get-pip.py, run 'sudo python get-pip.py'
 	-> upgrade twisted: 'sudo pip install twisted --upgrade'
-
